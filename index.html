@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-family: 'Archivo', sans-serif;
+        }
+    </style>
+</head>
+    <body class="h-[100vh] flex justify-center items-center bg-slate-200">
+        <div class="border p-4 rounded-md bg-slate-100 shadow-md ">
+
+        <input type="text"
+            class="border border-slate-300 p-3 my-4 bg-slate-100 rounded-md w-80 text-right h-20 shadow-sm focus:outline-none font-bold "
+            id="display" readonly
+        >
+
+        <div class="flex items-center justify-between font-bold">
+            <button class="border shadow-md w-14 h-14 rounded-md my-2 hover:bg-red-400 text-white bg-red-500 w-[9rem]"
+                onclick="clearDisplay()">C</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('%')">%</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('/')">/</button>
+        </div>
+
+        <div class="flex items-center justify-between font-bold">
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('7')">7</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('8')">8</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('9')">9</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('*')">*</button>
+        </div>
+        <div class="flex items-center justify-between font-bold">
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('4')">4</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('5')">5</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('6')">6</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('-')">-</button>
+        </div>
+        <div class="flex items-center justify-between font-bold">
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('1')">1</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('2')">2</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('3')">3</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('+')">+</button>
+        </div>
+
+        <div class="flex items-center justify-between font-bold">
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendNumber('0')">0</button>
+            <button class="border bg-white shadow-md w-14 h-14 rounded-md my-2 hover:bg-slate-300"
+                onclick="appendOperator('.')">.</button>
+            <button class="border bg-slate-900 text-white hover:bg-slate-600 shadow-md w-[9rem] h-14 rounded-md my-2"
+                onclick="calculate()">=</button>
+        </div>
+</body>
+<script src="main.js"></script>
+</html>
